@@ -50,5 +50,16 @@ public class ExamBean {
 	public void setRecordSeq(String recordSeq) {
 		this.recordSeq = recordSeq;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "[시험정보]\n"
+				+ "examSeq = " + examSeq + "\n"
+				+ "memberId = " + memberId + "\n"
+				+ "subjectSeq = " + subjectSeq + "\n"
+				+ "month = " + month + "\n"
+				+ "score = " + score + "\n"
+				+ "recordSeq = " + recordSeq + "\n";
+	}
+
 }

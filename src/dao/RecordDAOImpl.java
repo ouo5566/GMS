@@ -8,43 +8,45 @@ public class RecordDAOImpl implements RecordDAO{
 	private static RecordDAO instance = new RecordDAOImpl();
 	public static RecordDAO getInstance() {return instance;}
 	private RecordDAOImpl() {}
-
 	@Override
 	public void insertRecord(RecordBean record) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
-	public List<RecordBean> selectRecordList() {
-		List<RecordBean> list = new ArrayList<>();
-		return list;
+	public List<RecordBean> selectRecordAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public List<RecordBean> selectSome(String word) {
-		List<RecordBean> result = new ArrayList<>();
-		return result;
+	public List<RecordBean> selectByWord(String word) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public RecordBean selectOne(RecordBean record) {
-		RecordBean result = new RecordBean();
-		return result;
+	public RecordBean selectById(RecordBean record) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public String selectRecordCount() {
-		String result = "";
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public void updateRecord(RecordBean record) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void deleteRecord(RecordBean record) {
+		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public String selectLastRowNum() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

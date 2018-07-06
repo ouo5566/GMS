@@ -8,43 +8,39 @@ public class ProjectTeamDAOImpl implements ProjectTeamDAO{
 	private static ProjectTeamDAO instance = new ProjectTeamDAOImpl();
 	public static ProjectTeamDAO getInstance() {return instance;}
 	private ProjectTeamDAOImpl() {}
-
 	@Override
 	public void insertProjectTeam(ProjectTeamBean projectTeam) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
-	public List<ProjectTeamBean> selectProjectTeamList() {
-		List<ProjectTeamBean> list = new ArrayList<>();
-		return list;
+	public List<ProjectTeamBean> selectProjectTeamAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public List<ProjectTeamBean> selectSome(String word) {
-		List<ProjectTeamBean> result = new ArrayList<>();
-		return result;
+	public List<ProjectTeamBean> selectByWord(String word) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public ProjectTeamBean selectOne(ProjectTeamBean projectTeam) {
-		ProjectTeamBean result = new ProjectTeamBean();
-		return result;
+	public ProjectTeamBean selectById(ProjectTeamBean projectTeam) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public String selectProjectTeamCount() {
-		String result = "";
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public void updateProjectTeam(ProjectTeamBean projectTeam) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void deleteProjectTeam(ProjectTeamBean projectTeam) {
+		// TODO Auto-generated method stub
 		
 	}
 

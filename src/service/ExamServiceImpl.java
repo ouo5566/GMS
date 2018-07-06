@@ -1,8 +1,7 @@
 package service;
-import java.util.ArrayList;
 import java.util.List;
 
-import dao.ExamDAOImpl;
+import dao.*;
 import domain.*;
 
 public class ExamServiceImpl implements ExamService{
@@ -10,43 +9,70 @@ public class ExamServiceImpl implements ExamService{
 	public static ExamService getInstance() {return instance;}
 	private ExamServiceImpl() {}	
 
-		@Override
+	@Override
 	public void createExam(ExamBean exam) {
-		ExamDAOImpl.getInstance().insertExam(exam);
-	}
-
-	@Override
-	public List<ExamBean> list() {
-		List<ExamBean> list = new ArrayList<>();
-		return list;
-	}
-
-	@Override
-	public List<ExamBean> searchSome(String word) {
-		List<ExamBean> result = new ArrayList<>();
-		return result;
-	}
-
-	@Override
-	public ExamBean searchOne(ExamBean exam) {
-		ExamBean result = new ExamBean();
-		return result;
-	}
-
-	@Override
-	public String examCount() {
-		String result = "";
-		return result;
-	}
-
-	@Override
-	public void modifyExam(ExamBean exam) {
+		System.out.println("----ExamServiceImpl Start---");
 		
-	}
-
-	@Override
-	public void removeExam(ExamBean exam) {
+		RecordBean record = new RecordBean();
+		record.setAverage(RecordServiceImpl.getInstance().createAverageScore(exam.getScore()));
+		record.setGrade(RecordServiceImpl.getInstance().createGrade(record.getAverage()));
+		RecordServiceImpl.getInstance().createRecord(record);	
+		System.out.println("[성적표]\n" + record);
+		exam.setRecordSeq(RecordDAOImpl.getInstance().selectLastRowNum());
 		
+		String[] sub = {"Java","SQL","HTML5","R","Python"};
+		String[] s = exam.getScore().split(",");
+		
+		for( int i = 0 ; i < s.length ; i++ ) {
+			exam.setSubjectSeq(SubjectDAOImpl.getInstance().selectByWord(sub[i]).get(0).getSubjectSeq());
+			exam.setScore(s[Integer.parseInt(exam.getSubjectSeq())]);
+		System.out.println(sub[i]+" 시험결과 전송\n"+exam);
+			ExamDAOImpl.getInstance().insertExam(exam);
+		}
+		
+		System.out.println("----ExamServiceImpl End----");
+		
+//		System.out.println("----ExamServiceImpl----");
+//		System.out.println(exam);
+//		String[] scoreArr = exam.getScore().split(",");
+//		exam.setSubjectSeq(SubjectDAOImpl.getInstance().selectByWord("Java").get(0).getSubjectSeq());
+//		exam.setScore(scoreArr[Integer.parseInt(exam.getSubjectSeq())]);
+//		RecordBean record = new RecordBean();
+//		record.setAverage(average);
+//		record.setGrade(grade);
+//		RecordDAOImpl.getInstance().insertRecord(record);
+//		exam.setRecordSeq(RecordDAOImpl.getInstance().selectLastRowNum());
+//		ExamDAOImpl.getInstance().insertExam(exam);
 	}
-
+		@Override
+		public List<ExamBean> examList() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public List<ExamBean> searchByWord(String word) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public ExamBean searchById(ExamBean exam) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public String examCount() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public void modifyExam(ExamBean exam) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void removeExam(ExamBean exam) {
+			// TODO Auto-generated method stub
+			
+		}
 }
+

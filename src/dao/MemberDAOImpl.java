@@ -10,41 +10,38 @@ public class MemberDAOImpl implements MemberDAO{
 	private MemberDAOImpl() {}
 	@Override
 	public void insertMember(MemberBean member) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
-	public List<MemberBean> selectMemberList() {
-		List<MemberBean> list = new ArrayList<>();
-		return list;
+	public List<MemberBean> selectMemberAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public List<MemberBean> selectSome(String word) {
-		List<MemberBean> result = new ArrayList<>();
-		return result;
+	public List<MemberBean> selectByWord(String word) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public MemberBean selectOne(MemberBean member) {
-		MemberBean result = new MemberBean();
-		return result;
+	public MemberBean selectById(MemberBean member) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public String selectMemberCount() {
-		String result = "";
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public void updateMember(MemberBean member) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void deleteMember(MemberBean member) {
+		// TODO Auto-generated method stub
 		
 	}
-
+	
 }

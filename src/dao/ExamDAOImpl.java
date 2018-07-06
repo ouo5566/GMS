@@ -11,41 +11,37 @@ public class ExamDAOImpl implements ExamDAO{
 	
 	@Override
 	public void insertExam(ExamBean exam) {
-		System.out.println("정보 잘 받았슈\n잘 저장하겠슈");
+		// TODO Auto-generated method stub
+		
 	}
-
 	@Override
-	public List<ExamBean> selectExamList() {
-		List<ExamBean> list = new ArrayList<>();
-		return list;
+	public List<ExamBean> selectExamAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public List<ExamBean> selectSome(String word) {
-		List<ExamBean> result = new ArrayList<>();
-		return result;
+	public List<ExamBean> selectByWord(String word) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
-	public ExamBean selectOne(ExamBean exam) {
-		ExamBean result = new ExamBean();
-		return result;
+	public ExamBean selectByID(ExamBean exam) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public String selectExamCount() {
-		String result = "";
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
-
 	@Override
 	public void updateExam(ExamBean exam) {
+		// TODO Auto-generated method stub
 		
 	}
-
 	@Override
 	public void deleteExam(ExamBean exam) {
+		// TODO Auto-generated method stub
 		
 	}
-
-}
+	}

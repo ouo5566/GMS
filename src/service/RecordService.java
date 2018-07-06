@@ -10,4 +10,6 @@ public interface RecordService {
 	public String countRecord();
 	public void changeRecord();
 	public void removeRecord();
+	public String createAverageScore(String score);
+	public String createGrade(String average);
 }
